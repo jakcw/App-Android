@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NappyTab">
+
+    <TextView
+        android:id="@+id/nappyTabTxt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="#D8D8D8"
+        android:gravity="center"
+        android:text="Nappy change"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/sendHome"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/send_user_home"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left" />
+
+    <TextView
+        android:id="@+id/nappyTimeTextNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        android:text="Time of change"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nappyTabTxt" />
+
+    <ImageButton
+        android:id="@+id/takePicNappy"
+        android:layout_width="62dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="take photo"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nappyTabTxt"
+        app:srcCompat="@drawable/camera" />
+
+
+    <EditText
+        android:id="@+id/nappyChooseTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/editTimeNappy"
+        android:inputType="time"
+        android:focusable="false"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nappyTimeTextNew"
+        android:importantForAutofill="no" />
+
+
+    <RadioGroup
+        android:id="@+id/nappyTypeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nappyChooseTime">
+
+        <RadioButton
+            android:id="@+id/radioWet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:minHeight="48dp"
+            android:text="Wet" />
+
+        <RadioButton
+            android:id="@+id/radioDirty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:minHeight="48dp"
+            android:text="Dirty" />
+
+        <RadioButton
+            android:id="@+id/radioBoth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Both" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/notesNappyNew"
+        android:layout_width="0dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/notes_border"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Notes"
+        android:importantForAutofill="no"
+        android:maxLines="4"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nappyTypeGroup" />
+
+    <Button
+        android:id="@+id/saveNewNappyBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notesNappyNew" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

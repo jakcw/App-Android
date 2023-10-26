@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FeedingTab">
+
+    <TextView
+        android:id="@+id/feedTabTxt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="#D8D8D8"
+        android:gravity="center"
+        android:text="@string/feeding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/sendHome"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/send_user_home"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left" />
+
+    <TextView
+        android:id="@+id/dateEditFeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        android:text="Date of feed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedTabTxt" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Duration (hrs, mins, secs)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseDateFeed" />
+
+    <EditText
+        android:id="@+id/chooseDateFeed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="Date and time"
+        android:importantForAutofill="no"
+        android:inputType="time"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateEditFeed" />
+
+    <EditText
+        android:id="@+id/secsEdit"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="secs"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/hrsEdit"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:hint="hrs"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/minsEdit"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="mins"
+        android:inputType="phone"
+        app:layout_constraintEnd_toStartOf="@+id/secsEdit"
+        app:layout_constraintStart_toEndOf="@+id/hrsEdit"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <RadioGroup
+        android:id="@+id/feedingTypeSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:orientation='horizontal'
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minsEdit">
+
+        <RadioButton
+            android:id="@+id/leftSideBtn"
+            style="@style/CustomRadio"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Left" />
+
+        <RadioButton
+            android:id="@+id/rightSideBtn"
+            style="@style/CustomRadio"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Right" />
+
+        <RadioButton
+            android:id="@+id/bottleBtn"
+            style="@style/CustomRadio"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Bottle" />
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/feedNotes"
+        android:layout_width="0dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/notes_border"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Notes"
+        android:importantForAutofill="no"
+        android:maxLines="4"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedingTypeSelect" />
+
+    <Button
+        android:id="@+id/saveEditFeedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedNotes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

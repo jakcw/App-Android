@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF4A50</color>
+    <color name="button_selected">#2196F3</color>
+    <color name="radio_button_unselected_color">#FFFFFF</color>
+    <color name="button_border">#CCCCCC</color>
+    <color name="faded_in">#A5A5A5</color>
+    <color name="faded_out">#C8C8C8</color>
+
+</resources>

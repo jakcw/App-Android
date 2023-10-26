@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Baby App</string>
+    <string name="home">Home</string>
+    <string name="feeding">Feeding</string>
+    <string name="send_user_home">send_user_home</string>
+    <string name="nappy_change">Nappy change</string>
+    <string name="sleep_or_nap">Sleep or nap</string>
+    <string name="height_weight">Height/weight</string>
+    <string name="history">History</string>
+    <string name="editTimeNappy">Time</string>
+    <!-- Strings used for fragments for navigation -->
+</resources>

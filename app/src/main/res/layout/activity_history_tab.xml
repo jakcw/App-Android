@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryTab">
+
+    <TextView
+        android:id="@+id/historyTabTxt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="#D8D8D8"
+        android:gravity="center"
+        android:text="History"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/sendHome"
+        android:layout_width="37dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/send_user_home"
+        app:srcCompat="@drawable/left" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/entryList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyTabTxt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entryList"
+        app:layout_constraintVertical_bias="0.985"
+        tools:layout_editor_absoluteX="0dp">
+
+        <CheckBox
+            android:id="@+id/feedFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feeds" />
+
+        <CheckBox
+            android:id="@+id/nappyFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nappies"
+            android:translationX="20dp" />
+
+        <CheckBox
+            android:id="@+id/sleepFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:text="Sleeps"
+            android:translationX="-10dp" />
+
+        <CheckBox
+            android:id="@+id/heightFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Measurements" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
